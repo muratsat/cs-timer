@@ -14,9 +14,12 @@
 
 ## Пример man на русском (https://opennet.ru/)
 ## Синтаксис:
-#include < time.h >
 
+```C
+#include < time.h >
 int clock_gettime(clockid_t clock_id, struct timespec *t_time);
+```
+
 ### Аргументы:
 clock_id – идентификатор часов.
 t_time – структура, в которую будет записано определенное время.
