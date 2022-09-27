@@ -1,9 +1,10 @@
+#include <time.h>
 #include <stdio.h>
 
 #include "../../include/timer.h"
 
 int main() {
-  struct tm time = setCurrentTime();
+  DataTime time = setCurrentTime();
 
   return 0;
 }
