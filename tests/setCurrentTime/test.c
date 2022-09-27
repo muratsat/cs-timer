@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-#include "../../src/timer.h"
+#include "../../include/timer.h"
 
 int main() {
-  dt = setCurrentTime();
+  struct tm time = setCurrentTime();
 
   return 0;
 }

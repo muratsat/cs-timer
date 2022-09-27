@@ -1,6 +1,6 @@
 #include <time.h>
 
-#include "timer.h"
+#include "../include/timer.h"
 
 DataTime setCurrentTime() {
   return *localtime(NULL);
