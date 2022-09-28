@@ -10,7 +10,7 @@ total=0
 
 for test_dir in tests/*/; do
   if [ -f $test_dir/run.sh ]; then
-    printf "\n$test_dir:\n"
+    printf "[$test_dir]\n"
     if $test_dir/run.sh; then
       printf "${GREEN}test $test_dir passed${NC}\n"
       passed=$((passed+1))
@@ -21,6 +21,7 @@ for test_dir in tests/*/; do
     if [ -f $test_dir/main ]; then
       rm $test_dir/main
     fi
+    printf "\n";
   fi
 done
 
