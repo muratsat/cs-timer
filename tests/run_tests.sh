@@ -18,7 +18,9 @@ for test_dir in tests/*/; do
       printf "${RED}test $test_dir failed${NC}\n"
     fi
     total=$((total+1))
-    rm $test_dir/main
+    if [ -f $test_dir/main ]; then
+      rm $test_dir/main
+    fi
   fi
 done
 
