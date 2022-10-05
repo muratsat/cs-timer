@@ -31,8 +31,8 @@ for test_date in "${dates[@]}"; do
     passed=$((passed+1))
   else
     printf "${RED}failed $test_date $NC\n"
-    printf "Expected:\n$correct\n"
-    printf "Got:\n$output\n"
+    printf "Expected: $correct\n"
+    printf "Got: $output\n"
     # exit 1
   fi
   total=$((total+1))
