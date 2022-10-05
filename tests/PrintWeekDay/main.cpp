@@ -6,17 +6,20 @@
 #include "../../include/timer.h"
 #include "../../include/timer.hpp"
 
-int main() {
+DataTime getTime(char* time_string) { 
+  DataTime t; 
+  strptime(time_string, "%y-%m-%d %H:%M:%S", &t); 
+  mktime(&t);
+  return t; 
+}
+
+int main(int argc, char* argv[]) {
   std::string week_days[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-  DataTime time_now = setCurrentTime();
-  char buffer[80];
-  strftime(buffer, 80, "%Y-%m-%d %H:%M:%S", &time_now);
-  std::string str(buffer);
-  std::cout << str << '\n';
+  DataTime time = getTime(argv[1]);
+  // printf("%s\n", asctime(&time));
 
-  // char wday = PrintWeekDay(time_now);
-  // std::cout << 
+  PrintWeekDay(time);
 
   return 0;
 }
