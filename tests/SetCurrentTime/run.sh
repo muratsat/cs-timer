@@ -2,7 +2,7 @@
 
 test_dir=$(dirname $0)
 
-if ! gcc $test_dir/main.cpp src/SetCurrentTime.cpp -o $test_dir/main
+if ! g++ $test_dir/main.cpp src/SetCurrentTime.cpp -o $test_dir/main
 then
   exit 1
 fi

@@ -20,5 +20,3 @@ class Timer {
   void Show() const;
 
 };
-
-char PrintWeekDay(DataTime t);

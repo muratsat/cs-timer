@@ -1,10 +1,11 @@
-#include <stdio.h>
-#include <time.h>
+#include <ctime>
+#include <iostream>
 
-#include "../../include/timer.h"
+#include "../../include/DataTime.hpp"
+// #include "../../include/timer.hpp"
 
 int main() {
-  DataTime dt = setCurrentTime();
+  DataTime dt = SetCurrentTime();
   char buff[40] = {};
 
   strftime(buff, 40, "%Y-%m-%d %H:%M:%S", &dt);

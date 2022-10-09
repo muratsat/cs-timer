@@ -1,8 +1,8 @@
-#include <time.h>
+#include <ctime>
 
-#include "../include/timer.hpp"
+#include "../include/DataTime.hpp"
 
-DataTime setCurrentTime() {
+DataTime SetCurrentTime() {
   time_t time_now;
   time(&time_now);
   return *localtime(&time_now);

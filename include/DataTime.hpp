@@ -1,10 +1,9 @@
-#include <iostream>
 #include <time.h>
 
 typedef struct tm DataTime;
 
-DataTime setCurrentTime();
+DataTime SetCurrentTime();
 
-DataTime GetTime(char * time_string);
+DataTime GetTime(char* time_string);
 
 char PrintWeekDay(DataTime t);

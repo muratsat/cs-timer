@@ -11,13 +11,13 @@ typedef struct tm DataTime;
 // } Timer;
 
 // Устанавливает текущее системное данного компьютера
-DataTime setCurrentTime();
+DataTime SetCurrentTime();
 
 // Преобразует данную в формат DataTimer
-DataTime getTime(char *);  // YY-MM-DD HH:MIN:SEC
+DataTime GetTime(char *);  // YY-MM-DD HH:MIN:SEC
 
 // Печатает день недели (7-дневка, понедельник - 1 день)
-char printWeekDay(DataTime);
+char PrintWeekDay(DataTime);
 
 // Вычисляет значение DataTime через DD HH:MIN:SEC
 // DataTime after(char *);  // DD HH:MIN:SEC

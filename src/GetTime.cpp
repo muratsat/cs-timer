@@ -1,8 +1,9 @@
+#include <stdio.h>
 #include <ctime>
 
 #include "../include/DataTime.hpp"
 
-DataTime getTime(char* time_string) {
+DataTime GetTime(char* time_string) {
   int y, m, d, hh, mm, ss;
   sscanf(time_string, "%d-%d-%d %d:%d:%d", &y, &m, &d, &hh, &mm, &ss);
 
