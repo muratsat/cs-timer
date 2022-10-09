@@ -2,7 +2,10 @@
 
 test_dir=$(dirname $0)
 
-gcc $test_dir/main.c src/setCurrentTime.c -o $test_dir/main
+if ! gcc $test_dir/main.cpp src/SetCurrentTime.cpp -o $test_dir/main
+then
+  exit 1
+fi
 
 correct=$(date +"%Y-%m-%d %H:%M:%S")
 output=$($test_dir/main)
