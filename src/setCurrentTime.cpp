@@ -1,7 +1,6 @@
 #include <time.h>
-#include <iostream>
 
-#include "../include/timer.h"
+#include "../include/timer.hpp"
 
 DataTime setCurrentTime() {
   time_t time_now;
