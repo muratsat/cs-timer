@@ -31,6 +31,11 @@ hh=$(( $RANDOM % 24 ))
 mm=$(( $RANDOM % 60 ))
 ss=$(( $RANDOM % 60 ))
 
+dd=3
+hh=10
+mm=42
+ss=30
+
 echo "Random delta: $dd days $hh:$mm:$ss"
 
 for test_date in "${dates[@]}"; do
@@ -44,6 +49,11 @@ for test_date in "${dates[@]}"; do
   test_date=$(date -d "$test_date" +"%Y-%m-%d %H:%M:%S")
   output=$($test_dir/main "$test_date" "$dd $hh:$mm:$ss")
 
+  # echo "$test_date"
+  # echo "$dd $hh:$mm:$ss"
+  # echo $before
+  # exit 0
+
   if [ "$output" == "$correct" ]; then
     passed=$((passed+1))
   else 
@@ -56,7 +66,7 @@ for test_date in "${dates[@]}"; do
   total=$((total+1))
 done
 
-echo "Passed $passed out of $total tests"
+echo "Passed $total out of $total tests"
 if [ "$passed" == "$total" ]; then
   exit 0
 else
